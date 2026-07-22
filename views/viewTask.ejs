@@ -1,0 +1,24 @@
+    <%- include('partials/head') %>
+</head>
+<body>
+    <%- include('partials/nav') %>
+
+    <% if(viewData.length === 0){ %>
+        <h1>Not task yet !!</h1>
+    <% } else{ %>
+
+        <% viewData.forEach(function(data){ %>
+            <h1>Your task</h1>
+            <%= data.taskname %>    <br>
+            <%= data.date %> <br> <br>
+
+            <a href="/view-tasks/details/<%= data._id %>">View Details</a>
+            <a href="/view-tasks/update/<%= data._id %>">Update Task</a>
+            <a href="/delete/<%= data._id %>">Delete</a>
+            <hr>
+        <% }) %>
+
+    <% } %>
+    
+</body>
+</html>

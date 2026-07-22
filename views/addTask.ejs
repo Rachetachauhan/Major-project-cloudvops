@@ -1,0 +1,182 @@
+    <%- include('partials/head') %>
+</head>
+<body>
+    <%- include('partials/nav') %>
+
+<center>
+
+    <h1>📝 Task Management System</h1>
+    <h2>Add New Task</h2>
+
+    <hr>
+
+    <form action="/task-submitted" method="post">
+
+        <p>
+            <label for="taskname">Task Name</label><br>
+            <input
+                type="text"
+                id="taskname"
+                name="taskname"
+                placeholder="Enter Task Name"
+                value=""
+            >
+        </p>
+
+        <p>
+            <label for="description">Task Description</label><br>
+            <textarea
+                id="description"
+                name="description"
+                placeholder="Enter Task Description"
+                rows="5"
+                cols="30"></textarea>
+        </p>
+
+        <p>
+            <label for="date">Due Date</label><br>
+            <input
+                type="date"
+                id="date"
+                name="date"
+                value=""
+            >
+        </p>
+
+        <p>
+            <label for="priority">Task Priority</label><br>
+
+            <select
+                id="priority"
+                name="priority">
+
+                <option value="high">High</option>
+                <option value="medium">Medium</option>
+                <option value="low">Low</option>
+
+            </select>
+        </p>
+
+        <p>
+            <label>Task Status</label><br>
+
+            <input
+                type="radio"
+                id="pending"
+                name="status"
+                value="Pending">
+
+            <label for="pending">Pending</label>
+
+
+            <input
+                type="radio"
+                id="progress"
+                name="status"
+                value="In Progress">
+
+            <label for="progress">In Progress</label>
+
+
+            <input
+                type="radio"
+                id="complete"
+                name="status"
+                value="Completed">
+
+            <label for="complete">Completed</label>
+
+        </p>
+
+
+        <p>
+            <label for="assigned">Assigned To</label><br>
+
+            <input
+                type="text"
+                id="assigned"
+                name="assigned"
+                placeholder="Enter Person Name"
+                value=""
+            >
+
+        </p>
+
+
+        <p>
+            <label for="category">Task Category</label><br>
+
+            <select
+                id="category"
+                name="category">
+
+                <option value="work">Work</option>
+                <option value="study">Study</option>
+                <option value="personal">Personal</option>
+                <option value="other">Other</option>
+
+            </select>
+
+        </p>
+
+
+        <p>
+            <input
+                type="checkbox"
+                id="reminder"
+                name="reminder"
+                value="yes"
+            >
+
+            <label for="reminder">
+                Set Reminder
+            </label>
+
+        </p>
+
+
+        <p>
+
+            <input
+                type="submit"
+                name="addtask"
+                value="Add Task"
+            >
+
+            <input
+                type="reset"
+                name="clear"
+                value="Clear"
+            >
+
+        </p>
+
+
+    </form>
+
+    <hr>
+
+    <h3>📌 Task List</h3>
+
+    <table border="1">
+
+        <tr>
+            <th>Task Name</th>
+            <th>Priority</th>
+            <th>Status</th>
+            <th>Due Date</th>
+        </tr>
+
+        <tr>
+            <td>Complete Project</td>
+            <td>High</td>
+            <td>Pending</td>
+            <td>2026-07-25</td>
+        </tr>
+
+    </table>
+
+</center>
+
+</body>
+</html>

@@ -1,0 +1,106 @@
+    <%- include('partials/head') %>
+</head>
+<body>
+    <%- include('partials/nav') %>
+
+<center>
+
+    <h1>Create Account</h1>
+    <h2>Sign Up Page</h2>
+
+    <hr>
+
+    <form action="/signup" method="POST">
+
+
+<p>
+<label>Name</label><br>
+
+<input 
+type="text"
+name="name"
+placeholder="Enter Name">
+</p>
+
+
+
+<p>
+<label>Username</label><br>
+
+<input
+type="text"
+name="username"
+placeholder="Username">
+
+</p>
+
+
+
+
+<p>
+<label>Email</label><br>
+
+<input
+type="email"
+name="email"
+placeholder="Email">
+
+</p>
+
+
+
+
+<p>
+<label>Password</label><br>
+
+<input
+type="password"
+name="password"
+placeholder="Password">
+
+</p>
+
+
+
+
+<p>
+<label>Confirm Password</label><br>
+
+<input
+type="password"
+name="confirmPassword"
+placeholder="Confirm Password">
+
+</p>
+
+
+
+<button type="submit">
+Sign Up
+</button>
+
+
+</form>
+
+
+<p>
+Already have account?
+
+<a href="/login">
+Login Here
+</a>
+
+</p>
+
+
+    <hr>
+
+    <p>
+        Already have an account?
+        <a href="/login">Login Here</a>
+    </p>
+
+</center>
+
+</body>
+</html>
