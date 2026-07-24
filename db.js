@@ -7,9 +7,9 @@ const connectingMongo = async ()=>{
         console.log("CONNECTED WITH MONGOdb")
     }
     catch(e){
-        console.log("Failed to connect mongoDb");
-        process.exit(1)
-    }
+    console.error("MongoDB Error:", e);
+    process.exit(1);
+}
 }
 
 module.exports = connectingMongo
